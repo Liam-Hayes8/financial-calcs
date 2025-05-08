@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Mortgage Calculator</h2>
+
+<form id="mortgageForm" class="row g-3">
+    <div class="col-md-4">
+        <label for="principal" class="form-label">Loan Amount ($)</label>
+        <input id="principal" name="principal" type="number" class="form-control" required>
+    </div>
+    <div class="col-md-4">
+        <label for="rate" class="form-label">APR (%)</label>
+        <input id="rate" name="rate" type="number" step="0.01" class="form-control" required>
+    </div>
+    <div class="col-md-4">
+        <label for="years" class="form-label">Term (years)</label>
+        <input id="years" name="years" type="number" class="form-control" required>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </div>
+</form>
+
+<div id="mortgageResult" class="alert alert-info mt-4 d-none" aria-live="polite"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.getElementById('mortgageForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const payload = Object.fromEntries(new FormData(this).entries());
+        axios.post('/mortgage', payload)
+            .then(res=>{
+                const el = document.getElementById('mortgageResult');
+                el.textContent = `Monthly payment: $${res.data.payment}`;
+                el.classList.remove('d-none');
+            })
+            .catch(err => console.error(err));
+    });
+</script>
+{% endblock %}
