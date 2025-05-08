@@ -2,7 +2,7 @@
 Flask app that powers the three financial calculators
 """
 from flask import Flask, render_template, request, jsonify
-from calculators import mortgage_payment, retirement_401k, tax_liability
+from app.calculators import mortgage_payment, retirement_401k, tax_liability
 
 app = Flask(__name__)
 
