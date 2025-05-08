@@ -8,9 +8,17 @@ app = Flask(__name__)
 
 #Pages
 @app.route("/")
-def index():
-    """ Default page -- mortgage calculator form """
+def show_mortgage():
+    """ The mortgage calculator form """
     return render_template("mortgage.html")
+@app.route("/401k-page")
+def show_401k():
+    """ The 401(k) calculator form """
+    return render_template("retirement.html")
+@app.route("/tax-page")
+def show_tax():
+    """ The tax calculator form """
+    return render_template("tax.html")
 
 #API endpoints
 @app.post("/mortgage")
