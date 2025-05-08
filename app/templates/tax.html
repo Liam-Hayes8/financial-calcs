@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="mb-4">Tax Calculator</h2>
+
+    <form id="taxForm" class="row g-3">
+        <div class="col-md-6">
+            <label for="income" class="form-label">Taxable Income ($)</label>
+            <input id="income" name="income" type="number" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+            <label for="status" class="form-label">Filing Status</label>
+            <select id="status" name="status" class="form-select">
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+    </form>
+
+    <div id="taxResult" class="alert alert-info mt-4 d-none" aria-live="polite"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    //Hook form submit to Post /tax
+    document.getElementById('taxForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(this).entries());
+        axios.post('/tax', data)
+            .then(res => {
+                const el = document.getElementById('taxResult');
+                el.textContent = `Estimated tax: $${res.data.tax}`;
+                el.classList.remove('d-none');
+            })
+            .catch(err => console.error(err));
+    });
+</script>
+{% endblock %}
