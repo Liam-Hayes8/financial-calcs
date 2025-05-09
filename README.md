@@ -1,7 +1,13 @@
 Three Financial Calculators:
 
 
+
+
+
 This is a single container Flask app that provides three financial calculators:
+
+
+
 
 -- Mortgage Calculator: Calculate montly principal and interest payment
 
@@ -10,7 +16,11 @@ This is a single container Flask app that provides three financial calculators:
 -- Tax Calculator: Calculates estimated U.S. federal tax liability
 
 
+
+
 ---- Tech Stack ----
+
+
 
 
 Backend: Python 3.11 and Flask
@@ -22,7 +32,11 @@ Container: Docker
 Deployment: Azure Web App for Containers (optional)
 
 
+
+
 ---- Quick Start ----
+
+
 
 
 1. Clone the repo
