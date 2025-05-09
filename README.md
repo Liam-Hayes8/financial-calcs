@@ -32,16 +32,12 @@ Deployment: Azure Web App for Containers (optional)
 ```bash
 git clone git@github.com:Liam-Hayes8/financial-calcs.git
 cd financial-calcs
-<br>
 
 #2. Install (no Docker)
 
 python3 -m venv venv
-
 source venv/bin/activate	# maxOS/Linux
-
 pip install -r requirements.txt
-<br>
 
 # 3. Run
 
