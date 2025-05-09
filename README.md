@@ -4,13 +4,7 @@ Three Financial Calculators:
 
 *
 
-*
-
 This is a single container Flask app that provides three financial calculators:
-
-*
-
-*
 
 -- Mortgage Calculator: Calculate montly principal and interest payment
 
@@ -20,13 +14,8 @@ This is a single container Flask app that provides three financial calculators:
 
 *
 
-*
-
 ---- Tech Stack ----
 
-*
-
-*
 
 Backend: Python 3.11 and Flask
 
