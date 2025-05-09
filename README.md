@@ -1,8 +1,6 @@
 Three Financial Calculators:
-
-*
-
-*
+<br>
+<br>
 
 This is a single container Flask app that provides three financial calculators:
 
@@ -24,8 +22,6 @@ Frontend: Jinja2 + Bootstrap 5 + Axios
 Container: Docker
 
 Deployment: Azure Web App for Containers (optional)
-
-*
 
 *
 
