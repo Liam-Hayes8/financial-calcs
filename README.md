@@ -5,7 +5,7 @@ Three Financial Calculators:
 This is a single container Flask app that provides three financial calculators:
 <br>
 
--- Mortgage Calculator: Calculate montly principal and interest payment
+-- Mortgage Calculator: Calculate monthly principal and interest payment
 
 -- 401(k) Calculator: Calculate future value with annual contributions
 
@@ -30,5 +30,5 @@ Deployment: Azure Web App for Containers (optional)
 
 1. Clone the repo
 ```bash
-git clone git@github.cmo:Liam-Hayes8/financial-calcs.git
+git clone git@github.com:Liam-Hayes8/financial-calcs.git
 cd financial-calcs
