@@ -34,13 +34,10 @@ git clone git@github.com:Liam-Hayes8/financial-calcs.git
 cd financial-calcs
 
 #2. Install (no Docker)
-
 python3 -m venv venv
 source venv/bin/activate	# maxOS/Linux
 pip install -r requirements.txt
 
 # 3. Run
-
 python app/main.py
-
 # Then visit http://localhost:8080
