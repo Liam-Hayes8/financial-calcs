@@ -1,4 +1,4 @@
-Three Financial Calculators:
+# Three Financial Calculators:
 <br>
 <br>
 
@@ -28,7 +28,23 @@ Deployment: Azure Web App for Containers (optional)
 ---- Quick Start ----
 
 
-1. Clone the repo
+# 1. Clone the repo
 ```bash
 git clone git@github.com:Liam-Hayes8/financial-calcs.git
 cd financial-calcs
+<br>
+
+#2. Install (no Docker)
+
+python3 -m venv venv
+
+source venv/bin/activate	# maxOS/Linux
+
+pip install -r requirements.txt
+<br>
+
+# 3. Run
+
+python app/main.py
+
+# Then visit http://localhost:8080
